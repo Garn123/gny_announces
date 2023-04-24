@@ -12,5 +12,5 @@ Config.Announces = {
         color = 'white',         --Text color: names, rgb, #hex (any format accepted by CSS)
         shadow = 'black'         --Same as text
     },
-    --Just copia and paste below to add new jobs
+    --Just copy and paste below to add new jobs
 }
