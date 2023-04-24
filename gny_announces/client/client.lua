@@ -3,15 +3,19 @@ local QBCore, ESX = nil, nil
 
 if Config.Framework == 'QBCore' then
     QBCore = exports['qb-core']:GetCoreObject()
+    RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function()
+    loaded = true
+    end)
 elseif Config.Framework == 'ESX' then
     ESX = exports['es_extended']:getSharedObject()
+    
+    RegisterNetEvent('esx:playerLoaded')
+    AddEventHandler('esx:playerLoaded', function(playerData)
+        loaded = true
+    end)
 end
 
 AddEventHandler('onResourceStart', function(resourceName)
-    loaded = true
-end)
-
-RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function()
     loaded = true
 end)
 
