@@ -8,7 +8,6 @@ if Config.Framework == 'QBCore' then
     end)
 elseif Config.Framework == 'ESX' then
     ESX = exports['es_extended']:getSharedObject()
-    
     RegisterNetEvent('esx:playerLoaded')
     AddEventHandler('esx:playerLoaded', function(playerData)
         loaded = true
